@@ -1,5 +1,5 @@
 on:
-  pull_request_target
+  push
 
 jobs:
   run_python_script:
@@ -8,9 +8,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
         
-      - name: run application
+      - name: Run python code
         run: |
           ls -lrt
-          python3 ../main.py
+          python3 main.py
   
     
