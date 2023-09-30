@@ -8,6 +8,6 @@ jobs:
       - name: run application
         run: |
           ls -lrt
-          python3 main.py
+          python3 ../main.py
   
     
