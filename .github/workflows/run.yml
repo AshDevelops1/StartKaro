@@ -6,6 +6,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: run application
-        run: python3 main.py
+        run: |
+          ls -lrt
+          python3 main.py
   
     
