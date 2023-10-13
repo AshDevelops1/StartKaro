@@ -1,16 +1,24 @@
-on:
-  push
+Name of the workflow
+
+
+on: Event that triggers it		# ex: pushing code to a branch, pull request (creating, approving, comments, etc.)
+								# it can be manually triggered or on schedule
+								# multiple event types can be specified
+								# many combinations of configuration are possible
 
 jobs:
-  run_python_script:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-        
-      - name: Run python code
-        run: |
-          ls -lrt
-          python3 main.py
-  
-    
+	Job1:					# ex: building & testing a Python application
+		runs-on: 			# runner, ex: Ubuntu, Windows, Docker container
+		steps:				# run various tasks on console step by step such as running commands, scripts, etc.
+			step1						
+			step2
+			....
+			stepN
+	
+	Job2:					# ex: Publishing the same application to PyPi
+		runs-on: 			# runner, ex: Ubuntu, Windows, 
+		steps:
+			step1
+			step2
+			....
+			stepN
